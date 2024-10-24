@@ -1,0 +1,45 @@
+/* css reset */
+@import url("./reset.css");
+
+/* fonts */
+@import url("./fonts.css");
+
+/* general styles */
+body {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* header */
+header {
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+/* hero section */
+.hero {
+  padding: 1rem;
+}
+
+.hero_top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.hero_top div {
+  background-color: darkgrey;
+  border-radius: 1rem;
+}
+
+.hero_featured {
+  height: 5rem;
+}
