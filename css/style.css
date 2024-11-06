@@ -5,10 +5,39 @@
 @import url("./fonts.css");
 
 /* general styles */
+:root {
+  --primary-color: rgb(68, 0, 128);
+}
+
 body {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  padding: 1rem 4rem;
+  display: block;
+  width: max-content;
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+  filter: invert(1);
+}
+
+.btn-dark {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-light {
+  background-color: white;
+  color: var(--primary-color);
 }
 
 /* header */
@@ -29,17 +58,23 @@ header {
   padding: 1rem;
 }
 
-.hero_top {
+.hero_top,
+.hero_bottom {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 
-.hero_top div {
-  background-color: darkgrey;
-  border-radius: 1rem;
+.category_preview {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.hero_featured {
-  height: 5rem;
+@media screen and (min-width: 768px) {
+  .hero_top {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero_bottom {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
