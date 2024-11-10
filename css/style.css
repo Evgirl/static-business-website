@@ -74,6 +74,10 @@ header {
   display: grid;
   gap: 1rem;
   align-items: center;
+  padding: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .hero_featured {
@@ -93,7 +97,7 @@ header {
 .category_preview {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 14rem;
+  /* min-height: 14rem; */
   gap: 2rem;
   background-color: var(--primary-color);
 }
