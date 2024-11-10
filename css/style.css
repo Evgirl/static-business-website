@@ -214,6 +214,29 @@ header {
   font-weight: 700;
 }
 
+/* Footer */
+footer {
+  text-align: center;
+  background-color: var(--charcoal-accent);
+  color: #fff;
+}
+
+footer section {
+  width: 100%;
+  max-width: 1200px;
+  padding: 1rem;
+  margin: 0 auto;
+  display: grid;
+  padding: 5rem 1rem;
+  gap: 1rem;
+}
+
+footer ul li {
+  /* list-style-type: none; */
+  list-style: none;
+  /* margin-left: -2rem; */
+}
+
 @media screen and (min-width: 768px) {
   .hero_top {
     grid-template-columns: repeat(2, 1fr);
@@ -225,5 +248,15 @@ header {
 
   .section_content {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  footer section {
+    grid-template-columns: repeat(7, 1fr);
+    text-align: left;
+  }
+
+  footer .footer_logo {
+    grid-column-start: 1;
+    grid-column-end: 5;
   }
 }
