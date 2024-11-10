@@ -13,9 +13,6 @@
 }
 
 body {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
   font-family: sans-serif;
 }
 
@@ -55,6 +52,9 @@ header {
   gap: 1rem;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .logo {
@@ -184,6 +184,30 @@ header {
   background-color: #fff;
   display: grid;
   gap: 0.5rem;
+}
+
+.cta_banner {
+  width: 100%;
+  height: 600px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.cta_title {
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.cta_deal {
+  font-size: 3rem;
+  font-weight: 700;
 }
 
 @media screen and (min-width: 768px) {
