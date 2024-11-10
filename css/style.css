@@ -25,31 +25,27 @@ a {
 
 .btn {
   padding: 0.5rem 1rem;
-  display: block;
-  width: max-content;
-  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.5);
   font-size: 0.8rem;
 }
 
 .btn-large {
   padding: 1rem 4rem;
-  display: block;
   width: max-content;
-  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
-.btn:hover {
-  filter: invert(1);
+.btn,
+.btn-large {
+  display: block;
+  text-align: center;
+  border: 1px solid var(--primary-color);
+  font-weight: 700;
+  background-color: white;
+  color: var(--primary-color);
 }
 
 .btn-dark {
   background-color: var(--primary-color);
   color: white;
-}
-
-.btn-light {
-  background-color: white;
-  color: var(--primary-color);
 }
 
 /* header */
@@ -146,10 +142,48 @@ header {
   gap: 1rem;
 }
 
+.product_card {
+  padding: 1rem;
+  border: 1px solid var(--charcoal-accent);
+}
+
 .product_img {
   width: 100%;
   aspect-ratio: 16/9;
   overflow: hidden;
+}
+
+.product_info {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.product_info p {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.product_info span {
+  font-weight: 100;
+  color: var(--charcoal-accent);
+  font-size: 0.7rem;
+  /* I need the css for strikethrough */
+}
+
+/* I need linked hover states, like if I hover on the parent element, the child element should appear */
+/* .product_hover {
+  display: none;
+} */
+
+/* .product_info:hover {
+  
+} */
+
+.product_hover {
+  background-color: #fff;
+  display: grid;
+  gap: 0.5rem;
 }
 
 @media screen and (min-width: 768px) {
