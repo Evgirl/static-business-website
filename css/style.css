@@ -7,12 +7,13 @@
 /* general styles */
 :root {
   --primary-color: rgb(68, 0, 128);
+  --orange-accent: #efba74b0;
+  --blue-accent: #3dc3ec6f;
+  --charcoal-accent: #120e0e87;
 }
 
 body {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
+  font-family: sans-serif;
 }
 
 a {
@@ -20,24 +21,28 @@ a {
 }
 
 .btn {
-  padding: 1rem 4rem;
-  display: block;
-  width: max-content;
-  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
 }
 
-.btn:hover {
-  filter: invert(1);
+.btn-large {
+  padding: 1rem 4rem;
+  width: max-content;
+}
+
+.btn,
+.btn-large {
+  display: block;
+  text-align: center;
+  border: 1px solid var(--primary-color);
+  font-weight: 700;
+  background-color: white;
+  color: var(--primary-color);
 }
 
 .btn-dark {
   background-color: var(--primary-color);
   color: white;
-}
-
-.btn-light {
-  background-color: white;
-  color: var(--primary-color);
 }
 
 /* header */
@@ -47,6 +52,9 @@ header {
   gap: 1rem;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .logo {
@@ -56,20 +64,77 @@ header {
 /* hero section */
 .hero {
   padding: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .hero_top,
 .hero_bottom {
   display: grid;
   gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero_featured {
+  display: grid;
+  gap: 2rem;
+}
+
+.hero_featured h1 {
+  font-size: 5rem;
+}
+
+.hero_content {
+  width: 80%;
+  margin-left: auto;
 }
 
 .category_preview {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  /* min-height: 14rem; */
+  gap: 2rem;
+  background-color: var(--primary-color);
+}
+
+.preview_content {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  gap: 0.5rem;
+  width: max-content;
+}
+
+.preview_content h3 {
+  font-size: 2.5rem;
+}
+
+.preview_image {
+  width: 100%;
+  margin-left: -1rem;
+  display: grid;
+}
+
+.preview_image img {
+  margin: auto 0;
 }
 
 /* Sections */
+.section_header,
+.section_content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
 .section_header {
   display: flex;
   gap: 1rem;
@@ -77,17 +142,99 @@ header {
 }
 
 .section_content {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   display: grid;
   gap: 1rem;
+}
+
+.product_card {
+  padding: 1rem;
+  border: 1px solid var(--charcoal-accent);
 }
 
 .product_img {
   width: 100%;
   aspect-ratio: 16/9;
   overflow: hidden;
+}
+
+.product_info {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.product_info p {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.product_info span {
+  font-weight: 100;
+  color: var(--charcoal-accent);
+  font-size: 0.7rem;
+  /* I need the css for strikethrough */
+}
+
+/* I need linked hover states, like if I hover on the parent element, the child element should appear */
+/* .product_hover {
+  display: none;
+} */
+
+/* .product_info:hover {
+  
+} */
+
+.product_hover {
+  background-color: #fff;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.cta_banner {
+  width: 100%;
+  height: 600px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.cta_title {
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.cta_deal {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: var(--charcoal-accent);
+  color: #fff;
+}
+
+footer section {
+  width: 100%;
+  max-width: 1200px;
+  padding: 1rem;
+  margin: 0 auto;
+  display: grid;
+  padding: 5rem 1rem;
+  gap: 1rem;
+}
+
+footer ul li {
+  /* list-style-type: none; */
+  list-style: none;
+  /* margin-left: -2rem; */
 }
 
 @media screen and (min-width: 768px) {
@@ -101,5 +248,15 @@ header {
 
   .section_content {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  footer section {
+    grid-template-columns: repeat(7, 1fr);
+    text-align: left;
+  }
+
+  footer .footer_logo {
+    grid-column-start: 1;
+    grid-column-end: 5;
   }
 }
