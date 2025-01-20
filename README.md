@@ -145,7 +145,7 @@ The project’s file structure is organized to ensure clarity and easy navigatio
 Project/
 ├── index.html                # Main HTML file (Homepage)
 ├── about.html                # About Us page (Optional)
-├── services.html             # Services or Products page (Optional)
+├── product.html              #Products page (Optional)
 ├── contact.html              # Contact Us page
 ├── assets/                   # Folder for static assets (images, fonts, icons)
 │   ├── images/               # All image files
