@@ -38,6 +38,8 @@ a {
   font-weight: 700;
   background-color: white;
   color: var(--primary-color);
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 .btn-dark {
@@ -57,8 +59,14 @@ header {
   margin: 0 auto;
 }
 
+header nav .links {
+  display: flex;
+  gap: 2rem;
+}
+
 .logo {
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
 /* hero section */
