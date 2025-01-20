@@ -139,8 +139,6 @@ This website serves as a practical platform for businesses to enhance their onli
 
 # File Structure
 
-### File Structure
-
 The project’s file structure is organized to ensure clarity and easy navigation for developers and administrators. Below is a breakdown of the typical structure:
 
 ```plaintext
